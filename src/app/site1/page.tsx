@@ -172,7 +172,13 @@ export default function Home() {
         "Irrational fears impacting your life? We'll gently and systematically help you confront and overcome your phobia using evidence-based methods, reclaiming your freedom.",
     },
   ];
+  const [isSent, setIsSent] = useState(false);
 
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    setIsSent(true);
+  };
   return (
     <>
       <section
@@ -317,7 +323,7 @@ export default function Home() {
             </ul>
           </div>
 
-          <div className="bg-site1-white rounded-2xl w-fit px-4 h-fit py-8 flex justify-center flex-col items-center z-10">
+          <div className="bg-site1-white rounded-2xl w-fit px-4 h-fit py-8 flex justify-center flex-col items-center ">
             <Image src={lotus} width={0} height={0} alt="BACP Logo" />
             <h4 className="text-2xl font-semibold">
               Mindfulness & Stress Reduction
@@ -331,7 +337,7 @@ export default function Home() {
             </ul>
           </div>
 
-          <div className="bg-site1-white rounded-2xl w-fit px-4 h-fit py-8 flex justify-center flex-col items-center z-10   ">
+          <div className="bg-site1-white rounded-2xl w-fit px-4 h-fit py-8 flex justify-center flex-col items-center    ">
             <Image src={laptop} width={0} height={0} alt="BACP Logo" />
             <h4 className="text-2xl font-semibold">Online Counseling</h4>
 
@@ -568,8 +574,7 @@ export default function Home() {
           <div>
             {" "}
             <form
-              action="#"
-              method="POST"
+              onSubmit={handleSubmit}
               className="grid grid-cols-1 sm:grid-cols-2 gap-y-8 gap-x-12 mt-8"
             >
               <div>
@@ -581,6 +586,7 @@ export default function Home() {
                 </label>
                 <div className="mt-1">
                   <input
+                    required
                     type="text"
                     name="full-name"
                     id="full-name"
@@ -597,6 +603,7 @@ export default function Home() {
                 </label>
                 <div className="mt-1">
                   <input
+                    required
                     id="email"
                     name="email"
                     type="email"
@@ -616,6 +623,7 @@ export default function Home() {
                 </label>
                 <div className="mt-1">
                   <input
+                    required
                     type="text"
                     name="phone"
                     id="phone"
@@ -653,6 +661,7 @@ export default function Home() {
                 </label>
                 <div className="mt-1">
                   <textarea
+                    required
                     id="message"
                     name="message"
                     rows={4}
@@ -665,8 +674,12 @@ export default function Home() {
               <div className=" flex flex-col  w-fit gap-6 mt-4">
                 <a href="" className="">
                   {" "}
-                  <button className="bg-site1-cta px-6 py-3 rounded-full font-semibold w-fit mt-4 hover:bg-site1-green cursor-pointer hover:border">
-                    Send a Message{" "}
+                  <button
+                    type="submit"
+                    disabled={isSent}
+                    className="bg-site1-cta px-6 py-3 rounded-full font-semibold w-fit mt-4 hover:bg-site1-green cursor-pointer hover:border"
+                  >
+                    {isSent ? "Message Recived" : "Send Message"}
                   </button>
                 </a>
                 <p className="text-xs max-w-xs  ">

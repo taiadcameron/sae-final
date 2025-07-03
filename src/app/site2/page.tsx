@@ -278,7 +278,6 @@ export default function Home() {
             </p>
             <form
               onSubmit={handleSubmit}
-              method="POST"
               className="mt-9 grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-8"
             >
               <div>
@@ -290,6 +289,7 @@ export default function Home() {
                 </label>
                 <div className="mt-1">
                   <input
+                    required
                     type="text"
                     name="full-name"
                     id="full-name"
@@ -308,6 +308,7 @@ export default function Home() {
                 </label>
                 <div className="mt-1">
                   <input
+                    required
                     id="email"
                     name="email"
                     type="email"
@@ -326,6 +327,7 @@ export default function Home() {
                 </label>
                 <div className="mt-1">
                   <input
+                    required
                     type="text"
                     name="phone"
                     id="phone"
@@ -364,6 +366,7 @@ export default function Home() {
                 </label>
                 <div className="mt-1">
                   <textarea
+                    required
                     id="message"
                     name="message"
                     rows={4}
