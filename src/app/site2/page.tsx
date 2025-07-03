@@ -98,9 +98,11 @@ export default function Home() {
             </p>
           </div>
           <div>
-            <button className="bg-primary-site2 text-white px-6 py-3 shadow-md hover:bg-black transition duration-300 ease-in-out mb-10">
-              Book an Appointment
-            </button>
+            <a href="#contact-form">
+              <button className="bg-primary-site2 text-white px-6 py-3 shadow-md hover:bg-black transition duration-300 ease-in-out mb-10">
+                Book an Appointment
+              </button>
+            </a>
             <div className="flex gap-24 items-center">
               <Image src={cred3} width={100} height={40} alt="UKCP Logo" />
               <Image src={cred2} width={100} height={40} alt="BACP Logo" />
@@ -144,9 +146,11 @@ export default function Home() {
       <section id="services" className="pt-24">
         <div className="flex flex-row  justify-between mb-8 gap-4">
           <h2 className="text-3xl font-bold ">Clinical Services Offered</h2>
-          <button className="bg-primary-site2 text-white px-6 py-3 shadow-md hover:bg-black transition duration-300 ease-in-out mb-10">
-            Find Out More
-          </button>
+          <a href="#contact-form">
+            <button className="bg-primary-site2 text-white px-6 py-3 shadow-md hover:bg-black  mb-10">
+              Find Out More
+            </button>
+          </a>{" "}
         </div>
 
         <div className="grid grid-cols-3 gap-8 pr-52">
@@ -227,9 +231,11 @@ export default function Home() {
             number of concessionary rates are available. Please inquire for
             details regarding private health insurance.
           </p>
-          <button className="bg-primary-site2 text-white px-6 py-3 shadow-md hover:bg-black transition duration-300 ease-in-out mb-10 w-fit">
-            Book an Appointment
-          </button>
+          <a href="#contact-form">
+            <button className="bg-primary-site2 text-white px-6 py-3 shadow-md hover:bg-black transition duration-300 ease-in-out mb-10 w-fit">
+              Book an Appointment
+            </button>
+          </a>
         </div>
         <div className="relative w-64 h-40 md:w-80 md:h-52 lg:w-96 lg:h-64">
           <Image
@@ -258,7 +264,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="bg-white py-16 px-4 sm:px-6 lg:px-8">
+      <section
+        id="contact-form"
+        className="bg-white py-16 px-4 sm:px-6 lg:px-8 "
+      >
         <div className="max-w-7xl mx-auto lg:grid lg:grid-cols-2 lg:gap-24">
           <div className="flex flex-col">
             <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
@@ -370,7 +379,7 @@ export default function Home() {
                 <button
                   type="submit"
                   disabled={isSent}
-                  className="bg-primary-site2 text-white px-6 py-3 shadow-md hover:bg-black transition duration-300 ease-in-out mb-10 disabled:bg-gray-400 disabled:cursor-not-allowed"
+                  className="bg-primary-site2 text-white px-6 py-3 shadow-md hover:bg-black  mb-10 disabled:bg-gray-400 "
                 >
                   {isSent ? "Sent" : "Send a Message"}
                 </button>
@@ -382,7 +391,7 @@ export default function Home() {
             </form>
           </div>
 
-          <div className="mt-12 lg:mt-0">
+          <div className="mt-12 ">
             <div className="space-y-10">
               <div>
                 <h3 className="text-lg font-medium text-gray-900">

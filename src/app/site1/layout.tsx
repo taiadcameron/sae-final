@@ -12,20 +12,23 @@ export default function DashboardLayout({
   return (
     <html lang="en">
       <body>
-        <nav className="fixed flex justify-between bg-site1-white w-screen h-[80px] px-44 py-2 text-site1-text border-b-2 border-gray-200">
+        <nav className="fixed flex justify-between bg-site1-white w-screen h-[80px] px-44 py-2 text-site1-text border-b-2 z-10 border-gray-200">
           <div className="flex items-center font-semibold text-xl ">
             {" "}
             <Image src={logo} width={0} height={0} alt="BACP Logo" />{" "}
-            <h4>Dr. Elena Lee</h4>
+            <h4>Dr. Anna H</h4>
           </div>
 
           <div className="flex items-center gap-4 ">
             {" "}
-            <a href="">Services</a>
-            <a href="">About</a> <a href="">My Approch</a>{" "}
-            <button className="bg-site1-cta px-4 py-2 rounded-full w-fit  ">
-              Contact Me
-            </button>
+            <a href="#services">Services</a>
+            <a href="#faq">FaQ</a>
+            <a href="#about">About</a> <a href="probs">My Approch</a>{" "}
+            <a href="#contact-form">
+              <button className="bg-site1-cta px-4 py-2 rounded-full w-fit cursor-pointer ">
+                Contact Me
+              </button>
+            </a>
           </div>
         </nav>
         <main className="text-site1-text  font-site1-sec bg-site1-white">
@@ -35,16 +38,17 @@ export default function DashboardLayout({
           <div className="flex items-center font-semibold text-xl w-1/3 justify-center ">
             {" "}
             <Image src={logo} width={0} height={0} alt="BACP Logo" />{" "}
-            <h4>Dr. Elena Lee</h4>
+            <h4>Dr. Anna H </h4>
           </div>
           <div className=" w-1/3 flex flex-col items-center">
             <div className="flex items-center justify-center gap-4 mb-4  ">
               {" "}
-              <a href="">Services</a>
-              <a href="">About</a> <a href="">My Approch</a>{" "}
+              <a href="#services">Services</a>
+              <a href="#faq">FaQ</a>
+              <a href="#about">About</a> <a href="probs">My Approch</a>{" "}
             </div>
             <p>
-              © 2025 Dr. Elena V. Lee, Psychologist. All rights reserved.
+              © 2025 Dr. Anna Harrison, Psychologist. All rights reserved.
               Privacy Policy
             </p>
           </div>

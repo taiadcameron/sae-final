@@ -40,7 +40,7 @@ export default function DashboardLayout({
             </p>
             <p>
               {" "}
-              <a href="#contact">Contact</a>
+              <a href="#contact-form">Contact</a>
             </p>
           </div>
         </nav>
@@ -89,7 +89,7 @@ export default function DashboardLayout({
                   </p>
                   <p>
                     {" "}
-                    <a href="#contact">Contact</a>
+                    <a href="#contact-form">Contact</a>
                   </p>{" "}
                 </div>
               </div>

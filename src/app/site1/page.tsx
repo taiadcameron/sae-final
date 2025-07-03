@@ -5,7 +5,7 @@ import pfp from "../../../public/logo1.png";
 import person from "../../../public/page-1/Person.svg";
 import lotus from "../../../public/page-1/Lotus.svg";
 import laptop from "../../../public/page-1/Laptop.svg";
-import face1 from "../../../public/page-1/face1.svg";
+import face1 from "../../../public/page-1/pfp.jpg";
 import cardimg1 from "../../../public/page-1/cardimg (1).svg";
 import cardimg2 from "../../../public/page-1/cardimg (2).svg";
 import cardimg3 from "../../../public/page-1/cardimg (3).svg";
@@ -191,9 +191,12 @@ export default function Home() {
               challenges you're facing. My goal is to help you understand your
               feelings and build the tools for a calmer, more fulfilling life.
             </p>{" "}
-            <button className="bg-site1-cta px-6 py-3 rounded-full font-semibold">
-              Ready to Talk?
-            </button>
+            <a href="#contact-form" className="">
+              {" "}
+              <button className="bg-site1-cta px-6 py-3 rounded-full font-semibold w-fit mt-4 hover:bg-site1-green cursor-pointer hover:border">
+                Ready to Talk?
+              </button>
+            </a>
           </div>
           <div className="w-1/2 "></div>
         </div>
@@ -234,20 +237,32 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <button className="bg-site1-cta px-6 py-3 rounded-full font-semibold w-fit mt-4">
-            Ready to Talk?
-          </button>
-        </div>
-        <div className="w-1/2 bg-site1-green rounded-t-[600px] flex justify-center items-center p-24 pb-12">
-          {" "}
-          <div className="bg-site1-white w-full h-full rounded-[200px] flex px-8 py-24 flex-col gap-4">
+          <a href="#contact-form">
             {" "}
-            <div className=" flex items-center">
-              <Image src={pfp} width={0} height={0} alt="BACP Logo" />
-              <h3 className="text-xl font-semibold">Dr. Elena Lee</h3>
+            <button className="bg-site1-cta px-6 py-3 rounded-full font-semibold w-fit mt-4 hover:bg-site1-green cursor-pointer hover:text-site1-text">
+              Learn More Here
+            </button>
+          </a>
+        </div>
+        <div
+          id="about"
+          className="w-1/2 bg-site1-green rounded-t-[600px] flex justify-center items-center p-24 pb-12"
+        >
+          {" "}
+          <div className="bg-site1-white w-full h-full rounded-[200px]  flex px-8 py-24 flex-col gap-4">
+            {" "}
+            <div className=" flex ">
+              <Image
+                src={face1}
+                width={0}
+                height={0}
+                className="w-44  rounded-full"
+                alt="BACP Logo"
+              />
+              <h3 className="ml-4 text-xl font-semibold">Dr. Anna Harrison</h3>
             </div>
             <p>
-              Hello, I'm Dr. Elena Lee. My passion is guiding individuals
+              Hello, I'm Dr. Anna Harrison. My passion is guiding individuals
               towards emotional freedom and resilience. With over a decade of
               experience, I create a collaborative, empathetic space where
               genuine transformation unfolds. I empower you with personalized
@@ -264,10 +279,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-site1-green h-screen px-44 py-24">
+      <section id="services" className="bg-site1-green h-screen px-44 py-24">
         <div className="absolute right-0 ">
           <Image
-            src={face1}
+            src={"/page-1/pfp.jpg"}
             width={0}
             height={0}
             alt="BACP Logo"
@@ -330,7 +345,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-44 flex flex-col h-fit py-12 ">
+      <section id="prob" className="px-44 flex flex-col h-fit py-12 ">
         <div>
           <div className="bg-site1-cta h-4 w-24 z-10 "> </div>
 
@@ -377,13 +392,27 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-44 py-12 flex">
+      <section id="test" className="px-44 py-12 flex">
         <div>
           <div className="bg-site1-cta h-4 w-24 z-10 "> </div>
           <h2 className="text-4xl font-site1-prim mb-8 mt-4">
             What My Clients Say
           </h2>
-
+          <div className="w-1/2 mb-4">
+            <div className="flex gap-1 mb-4">
+              <Star /> <Star />
+              <Star />
+              <Star />
+              <Star />
+            </div>
+            <p>
+              "The impact of my sessions with Dr. H has been profound. Her
+              insightful perspective helped me understand my own patterns in a
+              new light. I feel more equipped to handle life's challenges with a
+              sense of calm and self-awareness."
+            </p>
+            <p className=" font-semibold text-right">- Adam</p>
+          </div>
           <div className="w-1/2">
             <div className="flex gap-1 mb-4">
               <Star /> <Star />
@@ -397,9 +426,6 @@ export default function Home() {
               made all the difference."
             </p>
             <p className=" font-semibold text-right">- Amy</p>
-            <div className=" border w-fit rounded-full p-2">
-              <ArrowRight />
-            </div>
           </div>
         </div>
         <div>
@@ -407,7 +433,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex px-44 py-24 justify-between">
+      <section id="price" className="flex px-44 py-24 justify-between">
         <div className="w-1/2">
           <div className="bg-site1-cta h-4 w-24 z-10 "> </div>
           <div>
@@ -452,7 +478,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="h-full w-[400px] flex flex-col gap-4[''">
+        <div className="h-full w-[400px] flex flex-col gap-4">
           <div className=" bg-site1-green rounded-3xl p-8 flex flex-col">
             <h4 className="text-2xl mb-2">Free Initial Consultation</h4>
             <p>
@@ -460,7 +486,7 @@ export default function Home() {
               fit.
             </p>
 
-            <div className="flex flex-col mt-8 gap-2">
+            <div className="flex flex-col mt-8  gap-2">
               <div className="flex justify-between">
                 <p className="font-semibold">Price:</p>
                 <p>£0</p>
@@ -473,40 +499,45 @@ export default function Home() {
                 <p className="font-semibold">Location:</p>
                 <p>Online</p>
               </div>
-              <button className="bg-site1-cta px-6 py-3 rounded-full w-fit font-semibold mt-8">
-                Schedule Now
-              </button>
+
+              <a href="#contact-form" className="">
+                {" "}
+                <button className="bg-site1-cta px-6 py-3 rounded-full font-semibold w-fit mt-4 hover:bg-site1-green cursor-pointer hover:border">
+                  Schedule Now
+                </button>
+              </a>
             </div>
           </div>
           <div className=" bg-site1-green rounded-3xl p-8 flex flex-col">
-            <h4 className="text-2xl mb-2">Free Initial Consultation</h4>
-            <p>
-              A no-obligation chat to discuss your needs and see if we're a good
-              fit.
-            </p>
+            <h4 className="text-2xl mb-2">Individual Session</h4>
+            <p>Tailored one-on-one support for your specific concerns.</p>
 
             <div className="flex flex-col mt-8 gap-2">
               <div className="flex justify-between">
                 <p className="font-semibold">Price:</p>
-                <p>£0</p>
+                <p>£98</p>
               </div>
               <div className="flex justify-between">
                 <p className="font-semibold">Duration:</p>
-                <p>15 Minutes</p>
+                <p>50 Minutes</p>
               </div>
               <div className="flex justify-between">
                 <p className="font-semibold">Location:</p>
-                <p>Online</p>
+                <p>In Person / Online</p>
               </div>
-              <button className="bg-site1-cta px-6 py-3 rounded-full w-fit font-semibold mt-8">
-                Schedule Now
-              </button>
+
+              <a href="#contact-form" className="">
+                {" "}
+                <button className="bg-site1-cta px-6 py-3 rounded-full font-semibold w-fit mt-4 hover:bg-site1-green cursor-pointer hover:border">
+                  Schedule Now{" "}
+                </button>
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="flex px-44 py-12 bg-site1-green">
+      <section id="faq" className="flex px-44 py-12 bg-site1-green">
         <div className="w-1/2">
           {" "}
           <Image src={testimg} width={0} height={0} alt="BACP Logo" />
@@ -522,7 +553,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-site1-green px-44 py-12 flex justify-between ">
+      <section
+        id="contact-form"
+        className="bg-site1-green px-44 py-12 flex justify-between "
+      >
         <div className="">
           <div className="bg-site1-cta h-4 w-24 z-10 "> </div>
           <h2 className="text-4xl font-site1-prim mb-8 mt-4">Lets Connect</h2>
@@ -629,9 +663,12 @@ export default function Home() {
               </div>
 
               <div className=" flex flex-col  w-fit gap-6 mt-4">
-                <button className="bg-site1-cta px-6 py-3 rounded-full font-semibold">
-                  Send a Message
-                </button>
+                <a href="" className="">
+                  {" "}
+                  <button className="bg-site1-cta px-6 py-3 rounded-full font-semibold w-fit mt-4 hover:bg-site1-green cursor-pointer hover:border">
+                    Send a Message{" "}
+                  </button>
+                </a>
                 <p className="text-xs max-w-xs  ">
                   Your information is confidential and will only be used to
                   contact you regarding your inquiry.
@@ -665,7 +702,7 @@ export default function Home() {
               </div>
               <div className="flex gap-4">
                 <Mail />
-                <p>Hello@ElenaLee.com</p>
+                <p>Hello@DrAnnaH.com</p>
               </div>
               <div className="flex gap-4">
                 <Pin />
@@ -675,9 +712,16 @@ export default function Home() {
           </div>
 
           <div className="flex gap-4 w-full justify-end">
-            <Facebook width={50} height={50} />
-            <Instagram width={50} height={50} />
-            <Linkedin width={50} height={50} />
+            <a href="https://www.facebook.com/">
+              {" "}
+              <Facebook width={50} height={50} />
+            </a>
+            <a href="https://www.Instagram.com/">
+              <Instagram width={50} height={50} />
+            </a>
+            <a href="https://www.Linkedin.com/">
+              <Linkedin width={50} height={50} />
+            </a>
           </div>
         </div>
       </section>
