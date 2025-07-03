@@ -1,10 +1,14 @@
 import "./globals.css";
 import Script from "next/script";
+import Clarity from "@microsoft/clarity";
+
 export const metadata = {
   title: "Therapist Website",
   description: "Local Therapist",
 };
+const projectId = "s962uca1i1";
 
+Clarity.init(projectId);
 export default function RootLayout({
   children,
 }: {
