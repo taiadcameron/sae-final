@@ -1,5 +1,9 @@
 import "./globals.css";
 import Script from "next/script";
+export const metadata = {
+  title: "Therapist Website",
+  description: "Local Therapist",
+};
 
 export default function RootLayout({
   children,
