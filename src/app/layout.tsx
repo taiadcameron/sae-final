@@ -18,7 +18,6 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <main>
-          {children}
           <Script id="clarity-script" strategy="afterInteractive">
             {`
               (function(c,l,a,r,i,t,y){
@@ -28,6 +27,7 @@ export default function RootLayout({
               })(window, document, "clarity", "script", "s962uca1i1");
             `}
           </Script>
+          {children}
         </main>
       </body>
     </html>
