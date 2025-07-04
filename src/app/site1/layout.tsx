@@ -23,7 +23,7 @@ export default function DashboardLayout({
             {" "}
             <a href="#services">Services</a>
             <a href="#faq">FaQ</a>
-            <a href="#about">About</a> <a href="probs">My Approch</a>{" "}
+            <a href="#about">About</a> <a href="#probs">My Approch</a>{" "}
             <a href="#contact-form">
               <button className="bg-site1-cta px-4 py-2 rounded-full w-fit cursor-pointer ">
                 Contact Me
